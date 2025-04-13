@@ -7,14 +7,15 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 #include "sd_read_write.h"
+#include "wifi_config.h"
 
 // Select camera model
 #define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
 
 #include "camera_pins.h"
 
-const char* ssid     = "********";   //input your wifi name
-const char* password = "********";   //input your wifi passwords
+const char* ssid     = SSID_NAME;   //input your wifi name
+const char* password = SSID_PWD;   //input your wifi passwords
 
 void cameraInit(void);
 void startCameraServer();
